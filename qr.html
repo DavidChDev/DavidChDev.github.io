@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener QR • ELJD</title>
+    <link rel="stylesheet" href="./assets/pico-master/css/pico.css">
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>Código <strong>QR</strong></h1>
+            <progress id="progress" max="100"></progress>
+            <p>Powered by: <strong>DavidDevCh</strong></p>
+        </div>
+        <div id="qrcodecontainer">
+            <img id="qrcode" alt="Codigo QR" class="imgqr" style="display: none;">
+        </div>
+    </main>
+    <style>
+        main {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #08769b;
+            width: 450px;
+            height: 450px;
+            padding: 8px;
+        }
+    </style>
+    <script src="./js/qr.js"></script>
+</body>
+
+</html>

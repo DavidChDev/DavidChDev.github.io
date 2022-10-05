@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión • ELJD</title>
+  <meta name="description" content="WhatsApp application">
+  <link rel="canonical" href="https://picocss.com/examples/sign-in/">
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="./assets/pico-master/css/pico.css">
+
+</head>
+
+<body>
+  <!-- Main -->
+  <main class="container">
+    <article class="grid">
+      <div>
+        <hgroup>
+          <h1>Iniciar sesión</h1>
+          <h2>Envio de mensajes automatizado de WhatsApp</h2>
+        </hgroup>
+        <form id="loginForm">
+          <input id="username" type="text" name="login" placeholder="Nombre de usuario" aria-label="Login"
+            autocomplete="nickname" required>
+          <input id="password" type="password" name="password" placeholder="Contraseña" aria-label="Password"
+            autocomplete="current-password" required>
+          <button id="btningresar" type="submit" class="contrast">Ingresar</button>
+        </form>
+      </div>
+    </article>
+  </main>
+  <!-- ./ Main -->
+  <style>
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      width: 450px;
+      height: 450px;
+      padding: 8px;
+    }
+  </style>
+  <script src="./js/login.js"></script>
+</body>
+
+</html>
