@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar mensajes • ELJD</title>
+    <link rel="stylesheet" href="./assets/pico-master/css/pico.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <!-- Button to trigger the modal -->
+                    <button class="secondary outline modal" onClick="logout()">
+                        Cerrar sesión
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <li>Servicios de contabilidad y auditoría • <strong>ELJD</strong></li>
+            </ul>
+            <ul>
+                <li>
+                    <select id="month" class="month">
+                        <option value="false" disabled selected>Periodo</option>
+                        <option value="enero">Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="septiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <form id="form" action="/" method="post">
+            <div class="grid">
+                <label for="celphone">
+                    Número de teléfono
+                    <select id="celphone" name="celphone">
+                        <option value="false" selected disabled hidden>Seleccione un contacto</option>
+                        <!-- <option value="50684155160">Elmer Chavarria</option>
+                        <option value="50685431558">Rebe Chavarria</option>
+                        <option value="50685505526">Lourdes Chacon</option> -->
+                        <option value="50685042820">David Chavarria</option>
+                        <!-- <option value="506850">David Chavarria (False)</option>
+                        <option value="50688125871">Yosselin Artavia</option>
+                        <option value="50686396541">Alicia Alfaro</option> -->
+                    </select>
+                </label>
+            </div>
+            <div class="grid">
+                <label for="name">
+                    Declaración a nombre de
+                    <select id="name" name="name">
+                        <option value="false" selected disabled hidden>Seleccione un nombre</option>
+                    </select>
+                </label>
+            </div>
+            <div class="grid">
+                <Label for="tax">
+                    Impuesto
+                    <input type="text" id="tax" style="text-align: right;" required />
+                </Label>
+            </div>
+            <div class="grid radio">
+                <label for="radio-1">
+                    <input type="radio" id="radio-1" name="radio" value="radio-1">
+                    Paga impuesto
+                </label>
+                <label for="radio-2">
+                    <input type="radio" id="radio-2" name="radio" value="radio-2">
+                    Declaración con impuesto a favor
+                </label>
+                <label for="radio-3">
+                    <input type="radio" id="radio-3" name="radio" value="radio-3">
+                    Declaración en 0
+                </label>
+                <label for="radio-4">
+                    <input type="radio" id="radio-4" name="radio" value="radio-4">
+                    Saldo a favor
+                </label>
+            </div>
+            <fieldset>
+                <label for="switch">
+                    <input type="checkbox" id="switch" name="switch" role="switch">
+                    Enviar archivo
+                </label>
+            </fieldset>
+            <div class="grid" id="fileContainer" style="display: none;">
+                <label for="file">
+                    <input type="file" name="file" id="fileId" onchange="imageUploaded()">
+                </label>
+            </div>
+            <div class="grid button">
+                <button id="btnsub" role="button" type="submit" class="secondary btn">Enviar mensaje</button>
+                <button id="btnprev" role="button" class="contrast btn">Previsualizar mensaje</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <article>
+            <p id="emisor" class="pmessage"></p>
+            <p id="receptor" class="pmessage"></p>
+            <p id="message" class="pmessage"></p>
+        </article>
+    </div>
+    <style>
+        .month {
+            height: 60px;
+        }
+
+        .radio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            width: 300px;
+        }
+
+        .pmessage {
+            text-align: left;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <script src="./js/message.js"></script>
+</body>
+
+</html>
